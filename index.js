@@ -31,12 +31,6 @@ app.post('/contact/email', (req, res) => {
     res.status(200).json({ message: 'Email sent successfully' });
 });
 
-app.get('/', (req, res) => {
-    res.status(200).json({
-        message: 'Server Connected'
-    });
-});
-
 // Route to get list of videos
 app.get('/videos-list', (req, res) => {
     const videoPath = './courses/804/sem1'; // Path to the directory containing videos
@@ -50,6 +44,13 @@ app.get('/videos-list', (req, res) => {
         console.error('Error reading video directory:', err);
         res.status(500).json({ error: 'Internal server error' });
     }
+});
+
+
+app.get('/', (req, res) => {
+    res.status(200).json({
+        message: 'Server Connected'
+    });
 });
 
 app.use('*', (req, res)=>{
