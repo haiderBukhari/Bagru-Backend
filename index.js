@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import { config } from 'dotenv';
 import { readdirSync } from 'fs'; // Importing fs module to read directory contents
 import connectDB from './config/MongooseConnection.js';
-import RegisterationRoutes from './Routes/Registerationroutes.js';
+import RegisterationRoutes from './routes/RegisterationRoutes.js';
 import { SendMessage } from './utils/sendMessage.js';
 import { SendEmail } from './utils/sendEmail.js';
 
